@@ -7,6 +7,7 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
+
 explore: debiteur {
   join: encaissement {
     sql_on: ${debiteur.identifiant_debiteur} = ${encaissement.identifiant_debiteur} ;;
