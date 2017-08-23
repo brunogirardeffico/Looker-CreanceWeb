@@ -308,6 +308,12 @@ view: debiteur {
   }
 
 
+  measure: nombre_de_dossiers_actifs {
+    type: sum
+    sql: ${debiteur.top_dossier_actif}  ;;
+    drill_fields: [Detail_des_dossiers*]
+  }
+
   measure: nombre_de_dossiers_clos {
     type: sum
     sql: ${debiteur.top_dossier_clos}  ;;
